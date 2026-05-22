@@ -1,85 +1,96 @@
-# best-foods.sn
-site vitrine bilingue pour restaurant
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Best Foods.sn</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    // Simple switcher de langue
+    function switchLang(lang) {
+      document.querySelectorAll('[data-fr]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </head>
 <body>
 
-  <!-- Logo -->
+  <!-- En-tête -->
   <header>
-    <img src="assets/images/logo.png" alt="Logo Best Foods" class="logo">
-    <h1>Bienvenue à Best Foods.sn</h1>
-    <h2>Welcome to Best Foods.sn</h2>
+    <h1 data-fr="Best Foods.sn" data-en="Best Foods.sn">Best Foods.sn</h1>
+    <p data-fr="Restaurant familial - Saveurs libanaises & sénégalaises"
+       data-en="Family restaurant - Lebanese & Senegalese flavors">
+       Restaurant familial - Saveurs libanaises & sénégalaises
+    </p>
+    <!-- Sélecteur de langue -->
+    <div style="margin-top:10px;">
+      <button onclick="switchLang('fr')">🇫🇷 Français</button>
+      <button onclick="switchLang('en')">🇬🇧 English</button>
+    </div>
   </header>
 
-  <!-- Présentation -->
-  <section id="presentation">
-    <h2>Présentation / About Us</h2>
-    <p>Restaurant moderne à Dakar, cuisine variée et savoureuse, boissons maison fraîches.</p>
-    <p>Modern restaurant in Dakar, offering varied and tasty cuisine, with fresh homemade drinks.</p>
-  </section>
+  <!-- Navigation -->
+  <nav>
+    <a href="#menu" data-fr="Menu" data-en="Menu">Menu</a>
+    <a href="#drinks" data-fr="Boissons" data-en="Drinks">Boissons</a>
+    <a href="#location" data-fr="Localisation" data-en="Location">Localisation</a>
+    <a href="#contact" data-fr="Réservation" data-en="Reservation">Réservation</a>
+  </nav>
 
-  <!-- Menu -->
+  <!-- Section Menu -->
   <section id="menu">
-    <h2>Menu</h2>
-    <div class="menu-item">
-      <img src="assets/images/menu1.jpg" alt="Plat populaire">
-      <p>Hummus / Poulet Grillé</p>
-    </div>
-    <div class="menu-item">
-      <img src="assets/images/menu2.jpg" alt="Plat populaire">
-      <p>Souvláki / Frites</p>
-    </div>
+    <h2 data-fr="🍽️ Notre Menu" data-en="🍽️ Our Menu">🍽️ Notre Menu</h2>
+    <img src="assets/images/menu1.jpg" alt="Plat libanais">
+    <img src="assets/images/menu2.jpg" alt="Plat sénégalais">
+    <p data-fr="Découvrez nos spécialités préparées avec des ingrédients frais."
+       data-en="Discover our specialties prepared with fresh ingredients.">
+       Découvrez nos spécialités préparées avec des ingrédients frais.
+    </p>
   </section>
 
-  <!-- Boissons -->
+  <!-- Section Boissons -->
   <section id="drinks">
-    <h2>Boissons Maison / Homemade Drinks</h2>
-    <img src="assets/images/drinks.jpg" alt="Boissons maison">
+    <h2 data-fr="🥤 Nos Boissons" data-en="🥤 Our Drinks">🥤 Nos Boissons</h2>
+    <img src="assets/images/drinks.jpg" alt="Boissons variées">
+    <p data-fr="Jus naturels, thés, et boissons traditionnelles."
+       data-en="Natural juices, teas, and traditional drinks.">
+       Jus naturels, thés, et boissons traditionnelles.
+    </p>
   </section>
 
   <!-- Localisation -->
   <section id="location">
-    <h2>Localisation / Location</h2>
-    <img src="assets/images/map.png" alt="Carte Best Foods">
-    <p>📍 Route de l’Aéroport, Dakar – en face CBAO, 50m après station Shell</p>
-    <p>☎️ +221 70 007 70 09</p>
-    <p>🕒 Ouvre à 11h30</p>
+    <h2 data-fr="📍 Où nous trouver" data-en="📍 Find us">📍 Où nous trouver</h2>
+    <p data-fr="Route de l'Aéroport, en face de CBAO, 50m après la station Shell - Dakar"
+       data-en="Airport Road, opposite CBAO, 50m after Shell station - Dakar">
+       Route de l'Aéroport, en face de CBAO, 50m après la station Shell - Dakar
+    </p>
+    <img src="assets/images/map.png" alt="Carte localisation">
   </section>
 
   <!-- Réservation -->
-  <section id="reservation">
-    <h2>Réservation / Booking</h2>
-    <form>
-      <label>Nom / Name:</label><br>
-      <input type="text" name="name"><br>
-      <label>Email:</label><br>
-      <input type="email" name="email"><br>
-      <label>Date:</label><br>
-      <input type="date" name="date"><br>
-      <button type="submit">Réserver / Book</button>
-    </form>
-    <p>Ou réservez directement via WhatsApp :</p>
-    <a href="https://wa.me/221700077009" target="_blank">📲 WhatsApp Reservation</a>
+  <section id="contact">
+    <h2 data-fr="📞 Réservez maintenant" data-en="📞 Book now">📞 Réservez maintenant</h2>
+    <p data-fr="Appelez-nous au +221 70 007 70 09"
+       data-en="Call us at +221 70 007 70 09">
+       Appelez-nous au +221 70 007 70 09
+    </p>
+    <a class="btn" href="https://wa.me/221700077009" target="_blank"
+       data-fr="Réserver via WhatsApp" data-en="Book via WhatsApp">
+       Réserver via WhatsApp
+    </a>
   </section>
 
-  <!-- Footer -->
+  <!-- Pied de page -->
   <footer>
-    <p>&copy; 2026 Best Foods.sn - Tous droits réservés / All rights reserved</p>
+    <p data-fr="&copy; 2026 Best Foods.sn - Tous droits réservés"
+       data-en="&copy; 2026 Best Foods.sn - All rights reserved">
+       &copy; 2026 Best Foods.sn - Tous droits réservés
+    </p>
   </footer>
-
-  <!-- Widget traduction -->
-  <div id="google_translate_element"></div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'fr'}, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
