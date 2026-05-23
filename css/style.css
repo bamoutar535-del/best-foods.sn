@@ -1,45 +1,91 @@
+
+  
+/* Palette principale : rouge + doré */
+:root {
+  --primary: #b22222;   /* Rouge foncé */
+  --secondary: #daa520; /* Doré */
+  --light: #fdfdfd;
+  --dark: #222;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: #f9f9f9;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
 }
 
 header {
-  background-color: #8B0000;
-  color: white;
-  padding: 20px;
+  background: var(--primary);
+  color: var(--light);
+  padding: 1rem;
+  text-align: center;
 }
 
-.logo {
-  max-width: 120px;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav {
+  background: var(--secondary);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
-  margin: 40px 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.menu-item {
-  display: inline-block;
-  margin: 10px;
+section h2 {
+  color: var(--primary);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 0.5rem;
 }
 
-.menu-item img {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+button, .btn {
+  background: var(--primary);
+  color: var(--light);
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover {
+  background: var(--secondary);
+  color: var(--dark);
 }
 
 footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .menu-item img {
-    width: 100%;
+  nav {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
+
