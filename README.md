@@ -14,3 +14,16 @@ Il est conçu pour être responsive et accessible sur mobile et ordinateur.
 - Optimisation SEO avec balises meta
 
 ## 📂 Structure du projet
+
+## 📍 Coordonnées du restaurant
+- 📍 Adresse : Route de l’Aéroport, en face CBAO, 50 m après station Shell, Dakar  
+- 📞 Téléphone : +221 70 007 70 09  
+- 🕒 Horaires : Ouvre à 12h00  
+- 🌍 Google Maps : PFXR+2H Dakar  
+
+## 🚀 Déploiement
+Le site est publié via **GitHub Pages** :  
+👉 [https://bamoutar535-del.github.io/best-foods.sn/](https://bamoutar535-del.github.io/best-foods.sn/)
+
+## 👤 Auteur
+Mouctar – Dakar, Sénégal
